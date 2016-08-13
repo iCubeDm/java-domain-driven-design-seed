@@ -1,0 +1,30 @@
+@startuml
+title Main Design
+
+package "Parent Module"{
+
+    [rest] as rest
+    [domain] as domain
+    [app] as app
+    [integration] as integration
+    [persistence] as persistence
+
+    app -down-* integration
+    app -down-* persistence
+    app -down-* domain
+    app -down-* rest
+    HTTP -right..> rest: call
+
+    rest        -up..> domain
+    persistence -up..> domain
+    integration -up..> domain
+
+    persistence -up..> database: use
+
+
+    database "database" {
+    }
+
+}
+
+@enduml
