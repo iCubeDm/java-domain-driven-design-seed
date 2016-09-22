@@ -11,11 +11,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--<module>app</module>-->
+        <module>app</module>
         <module>domain</module>
-        <!--<module>persistence</module>-->
+        <module>persistence</module>
         <module>rest</module>
-        <!--<module>integration</module>-->
+        <module>integration</module>
     </modules>
 
     <dependencyManagement>
