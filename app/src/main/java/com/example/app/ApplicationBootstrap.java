@@ -2,6 +2,8 @@ package com.example.app;
 
 import com.example.domain.DomainService;
 import com.example.domain.MessageService;
+import com.example.integration.IntegrationConfig;
+import com.example.persistence.PersistenceConfig;
 import com.example.rest.ExampleRestInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,10 +39,9 @@ public class ApplicationBootstrap {
 
     private static ApplicationContext createSpringContext() {
         return new AnnotationConfigApplicationContext(
-                ExampleDomainConfig.class
-//                ,
-//                IntegrationConfig.class,
-//                PersistenceConfig.class
+                ExampleDomainConfig.class,
+                PersistenceConfig.class,
+                IntegrationConfig.class
         );
     }
 

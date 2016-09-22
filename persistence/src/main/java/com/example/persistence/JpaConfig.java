@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.lendico.loan_manager.persistence.springdata")
+@EnableJpaRepositories("com.example.persistence.springdata")
 @EnableTransactionManagement
 @EnableJpaAuditing
 class JpaConfig {
@@ -30,14 +30,13 @@ class JpaConfig {
     private DataSource dataSource;
 
     @Bean
-    // @DependsOn("liquibase")
     public EntityManagerFactory entityManagerFactory() {
 
         final AbstractJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 
         final LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.lendico.loan_manager.persistence.entity");
+        factory.setPackagesToScan("com.example.persistence.entity");
         factory.setDataSource(dataSource);
         factory.setJpaProperties(getJpaProperties());
         factory.afterPropertiesSet();

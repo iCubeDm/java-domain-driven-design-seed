@@ -1,5 +1,7 @@
 package com.example.domain;
 
+import com.example.domain.api.MessageData;
+
 import java.time.ZonedDateTime;
 
 import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME;
@@ -8,13 +10,13 @@ import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME;
  * author: dmitry.yakubovsky
  * date:   13/08/16
  */
-public class Message {
+public class MessageDomain implements MessageData {
 
     private final String body;
 
     private final String createdAt;
 
-    public Message(String messageContent) {
+    public MessageDomain(String messageContent) {
         this.body = messageContent.trim();
         this.createdAt = ZonedDateTime.now().format(ISO_LOCAL_DATE_TIME);
     }

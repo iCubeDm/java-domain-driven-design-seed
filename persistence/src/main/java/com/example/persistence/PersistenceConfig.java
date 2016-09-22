@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan({"com.lendico.loan_manager.persistence.repository"})
+@ComponentScan({"com.example.persistence.repository"})
 @Import({MemoryDataSourceConfig.class, PersistentDataSourceConfig.class, JpaConfig.class})
 public class PersistenceConfig {
 

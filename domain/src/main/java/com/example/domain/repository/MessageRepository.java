@@ -1,6 +1,6 @@
 package com.example.domain.repository;
 
-import com.example.domain.Message;
+import com.example.domain.MessageDomain;
 
 /**
  * author: dmitry.yakubovsky
@@ -8,5 +8,5 @@ import com.example.domain.Message;
  */
 public interface MessageRepository {
 
-    void save(Message message);
+    void save(MessageDomain messageDomain);
 }

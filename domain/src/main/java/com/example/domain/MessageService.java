@@ -20,11 +20,11 @@ public class MessageService implements DomainService {
 
     public void process(String messageContent) {
 
-        Message message = new Message(messageContent);
+        MessageDomain messageDomain = new MessageDomain(messageContent);
 
-        System.out.println(message);
+        System.out.println(messageDomain);
 
-        messageRepository.save(message);
-        messageClient.send(message);
+        messageRepository.save(messageDomain);
+        messageClient.send(messageDomain);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.domain.api;
 
-import com.example.domain.Message;
+import com.example.domain.MessageDomain;
 
 /**
  * author: dmitry.yakubovsky
@@ -8,5 +8,5 @@ import com.example.domain.Message;
  */
 public interface MessageClient {
 
-    void send(Message message);
+    void send(MessageDomain messageDomain);
 }
