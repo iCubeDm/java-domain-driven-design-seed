@@ -48,7 +48,7 @@ public abstract class AbstractRestClient {
     }
 
     /**
-     * Post initializers
+     * Post initializer
      */
     {
         logger = LoggerFactory.getLogger(this.getClass());
